@@ -1,7 +1,7 @@
 package com.example.springOAuth2.service;
 
 import com.example.springOAuth2.dto.CustomOAuth2User;
-import com.example.springOAuth2.dto.GoogleReponse;
+import com.example.springOAuth2.dto.GoogleResponse;
 import com.example.springOAuth2.dto.NaverResponse;
 import com.example.springOAuth2.dto.OAuth2Response;
 import lombok.extern.slf4j.Slf4j;
@@ -26,7 +26,7 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
             oAuth2Response = new NaverResponse(oAuth2User.getAttributes());
         }
         else if (registrationId.equals("google")) {
-            oAuth2Response = new GoogleReponse(oAuth2User.getAttributes());
+            oAuth2Response = new GoogleResponse(oAuth2User.getAttributes());
         }
         else {
 
